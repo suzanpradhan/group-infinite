@@ -1,0 +1,422 @@
+// CUSTOM RESOURCES
+@font-face {
+    font-family: 'GilroyLight'; 
+    src: url('fonts/GILROY-LIGHT.OTF'); 
+}
+@font-face {
+  font-family: 'GilroyBold'; 
+  src: url('fonts/GILROY-EXTRABOLD.OTF'); 
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+  background: #1d1d1d;
+}
+
+// MAIN CSS START HERE
+.content {
+  & > .nav-bar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    > .row {
+        height: 70px;
+        padding: 0px 32px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;;
+      > .left-items {
+        display: flex;
+        align-items: center;
+        & > img{
+          height: 60px;
+          padding: 0px 6px;
+        }
+        & > h1 {
+          color: #e1e1e1;
+          font-family: "GilroyLight";
+          font-size: 18px;
+        }
+      }
+      & > .right-items{
+          > .navigations{
+              display: flex;
+              list-style-type: none;
+              > li{
+                padding: 0px 14px;
+                color: white;
+                > a{
+                  font-family: "GilroyLight";
+                  font-size: 14px;
+                  color: #bfbfbf;
+                  text-decoration: none;
+                  &:hover{
+                    color: white;
+                  }
+                }
+              }
+          }
+      }
+    }
+  }
+
+  & > .main-container{
+    display: flex;
+    flex-direction: column;
+    & > .intro-wrapper{
+      padding: 0px 38px;
+      height: 100vh;
+      background-color: #1d1d1d;
+      background-image: url("images/backgroun1.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding-bottom: 160px;
+      & > .intro-content{
+        padding-bottom: 24px;
+        & > h1{
+          width: 550px;
+          font-family: "GilroyLight";
+          font-size: 20px;
+          letter-spacing: 1px;
+          color: #fff;
+          padding-bottom: 18px;
+        }
+        & > h2{
+          font-family: "GilroyLight";
+          font-size: 13px;
+          color: #bfbfbf;
+        }
+      }
+      & > a{
+        text-decoration: none;
+        color: white;
+        font-family: "GilroyLight";
+        font-family: 16px;
+        display: flex;
+        align-items: center;
+        transition: 350ms;
+        &:hover{
+          > .explore-button{
+            background-color: rgba($color: white, $alpha: 0.1);
+          }
+        }
+        > .explore-button{
+          margin-left: 16px;
+          width: 40px;
+          cursor: pointer;
+          height: 40px;
+          border-radius: 99px;
+          border: 1px solid white;
+          background-color: transparent;
+      }}
+      
+    }
+
+    & > .what-we-do-wrapper{
+      padding: 0px 38px;
+      height: 130vh;
+      background-color: #1d1d1d;
+      background-image: url("images/background2.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      > .wrapper-title{
+        font-family: "GilroyBold";
+        font-size: 32px;
+        color: white;
+        margin-bottom: 60px;
+      }
+      > .work-flow-cards{
+        display: flex;
+        align-items: flex-start;
+        padding-left: 32px;
+        >.work-flow-cards-set{
+          display: flex;
+          align-items: flex-start;
+          > .work-flow-card-background{
+            height: min-content;
+            width: 220px;
+            &:nth-child(2){
+              margin: 0px 32px;
+              margin-top: 140px;
+            }
+          > .work-flow-card{
+            background-color: #1d1d1d;
+            border: 1px solid #bfbfbf;
+            padding: 24px 20px;
+            transition: 300ms;
+            &:hover{
+              transform: translate(-8px, -8px);
+            }
+            & > .card-title{
+              font-family: "GilroyBold";
+              font-size: 20px;
+              color: white;
+              padding-bottom: 14px;
+            }
+
+            & > .card-description{
+              font-family: "GilroyLight";
+              font-size: 14px;
+              color: #bfbfbf;
+              padding-bottom: 60px;
+            }
+          }
+        }
+        }
+        
+      }
+    }
+
+    & > .our-services-wrapper{
+      padding-left: 38px;
+      height: 100vh;
+      background-color: #1d1d1d;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      > .content-float-left{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: min-content;
+        float: right;
+        > .wrapper-title{
+          font-family: "GilroyLight";
+          font-size: 16px;
+          color: #bfbfbf;
+          margin-bottom: 32px;
+        }
+        > .services-cards{
+          display: flex;
+          
+          > .service-card{
+            width: 240px;
+            height: 500px;
+            background-color: #1d1d1d;
+            border: 1px solid #707070;
+            padding: 60px 24px;
+            transition: 300ms;
+            &:hover{
+              background-color: rgba($color: white, $alpha: 0.1);
+            }
+            & > .card-title{
+              font-family: "GilroyLight";
+              font-size: 20px;
+              width: 100px;
+              color: white;
+              margin-bottom: 32px;
+            }
+            & > .card-description{
+              font-family: "GilroyLight";
+              font-size: 14px;
+              color: #bfbfbf;
+            }
+          }
+        }
+    }
+    }
+
+    & > .profile-wrapper{
+      padding-left: 38px;
+      height: 100vh;
+      background-color: #1d1d1d;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & > .profile-media{
+        border: 1px solid #707070;
+        margin-right: 60px;
+        > img{
+          width: 340px;
+          height: 480px;
+          object-position: center;
+          object-fit: cover;
+        }
+      }
+      & > .profile-content{
+        width: 500px;
+        position: relative;
+        padding: 40px 0px;
+
+        &::after{
+          content: "";
+          position: absolute;
+          top: 0;
+          width: 100px;
+          height: 2px;
+          border-radius: 5px;
+          background-color: #EA4A4C;
+        }
+        & > .profile-name{
+          font-family: "GilroyBold";
+          font-size: 42px;
+          color: white;
+          margin-bottom: 14px;
+        }
+        & > .profile-post{
+          font-family: "GilroyLight";
+          font-size: 18px;
+          color: #bfbfbf;
+          margin-bottom: 20px;
+        }
+
+        & > .profile-description{
+          font-family: "GilroyLight";
+          font-size: 14px;
+          color: #bfbfbf;
+        }
+
+        & > .signature{
+          height: 100px;
+          object-position: center;
+          object-fit: contain;
+        }
+        & > .profile-social-media{
+          display: flex;
+          > a{
+            margin-right: 12px;
+          }
+        }
+      }
+
+    }
+
+    & > .contact-wrapper{
+      padding: 0px 38px;
+      height: 130vh;
+      background-color: #1d1d1d;
+      background-image: url("images/background3.png");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+      > .left-content{
+        margin-bottom: 80px;
+        > .contact-content{
+          display: flex;
+          flex-direction: column;
+          margin-bottom: 20px;
+          p{
+            font-family: "GilroyLight";
+            font-size: 14px;
+            padding: 6px 0px;
+            color: #bfbfbf;
+          }
+          > .content-title{
+            font-family: "GilroyBold";
+            font-size: 32px;
+            color: white;
+            margin-bottom: 14px;
+          }
+        }
+        > .back-navigations{
+          > .content-title{
+            font-family: "GilroyLight";
+            font-size: 16px;
+            color: white;
+            margin-bottom: 14px;
+          }
+          .navigations{
+            display: flex;
+            list-style-type: none;
+            > li{
+              > a{
+                text-decoration: none;
+                font-family: "GilroyLight";
+                color: #bfbfbf;
+                font-size: 14px;
+                margin-right: 14px;
+
+                &:hover{
+                  color: white;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      > .meeting-content{
+        margin-bottom: 80px;
+        & > .content-title{
+          font-family: "GilroyLight";
+          font-size: 18px;
+          color: white;
+          margin: 10px 0px;
+        }
+        & > .meeting-social-media{
+          display: flex;
+          > a{
+            margin-right: 12px;
+          }
+        }
+        & > p{
+          font-family: "GilroyLight";
+          font-size: 14px;
+          color: #bfbfbf;
+          margin: 10px 0px;
+        }
+        & > .meeting-with-email-form{
+          width: 500px;
+          input, textarea{
+            background-color: #2E2E2E;
+            padding: 10px;
+            font-family: "GilroyLight";
+            font-size: 16px;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+          }
+          & > .customer-details{
+            margin-bottom: 10px;
+            display: flex;
+            #fullname{
+              margin-right: 8px;
+            }
+            #email{
+              flex: 1;
+            }
+          }
+          & > .message{
+            display: flex;
+            #message{
+              flex: 1;
+            }
+          }
+          & .meeting-submit{
+            padding: 10px 14px;
+            background-color: white;
+            margin-top: 14px;
+            color: #1d1d1d;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+            font-size: 12px;
+            font-family: "GilroyBold";
+            &:hover{
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}

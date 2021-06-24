@@ -522,9 +522,6 @@ div[id] {
   .content > .nav-bar > .row > .right-items > .navigations.open {
     display: block;
   }
-  .content > .nav-bar > .row > .right-items > .navigations.close {
-    display: none;
-  }
   .content > .nav-bar > .row > .right-items > .burger {
     display: block;
   }

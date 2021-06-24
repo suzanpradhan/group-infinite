@@ -1,10 +1,10 @@
 @font-face {
-  font-family: 'GilroyLight';
+  font-family: "GilroyLight";
   src: url("fonts/GILROY-LIGHT.OTF");
 }
 
 @font-face {
-  font-family: 'GilroyBold';
+  font-family: "GilroyBold";
   src: url("fonts/GILROY-EXTRABOLD.OTF");
 }
 
@@ -42,6 +42,7 @@ div[id] {
 }
 
 .content > .nav-bar > .row > .left-items {
+  align-self: flex-start;
   display: flex;
   align-items: center;
 }
@@ -57,6 +58,11 @@ div[id] {
   font-size: 18px;
 }
 
+.content > .nav-bar > .row > .right-items {
+  display: flex;
+  align-items: center;
+}
+
 .content > .nav-bar > .row > .right-items > .navigations {
   display: flex;
   list-style-type: none;
@@ -68,6 +74,7 @@ div[id] {
 }
 
 .content > .nav-bar > .row > .right-items > .navigations > li > a {
+  display: block;
   font-family: "GilroyLight";
   font-size: 14px;
   color: #bfbfbf;
@@ -76,6 +83,19 @@ div[id] {
 
 .content > .nav-bar > .row > .right-items > .navigations > li > a:hover {
   color: white;
+}
+
+.content > .nav-bar > .row > .right-items > .burger {
+  cursor: pointer;
+  display: none;
+}
+
+.content > .nav-bar > .row > .right-items > .burger > .line {
+  margin: 5px;
+  width: 25px;
+  height: 2px;
+  background: #f2f2f2;
+  transition: 0.2s ease;
 }
 
 .content > .main-container {
@@ -301,7 +321,7 @@ div[id] {
   width: 100px;
   height: 2px;
   border-radius: 5px;
-  background-color: #EA4A4C;
+  background-color: #ea4a4c;
 }
 
 .content > .main-container > .profile-wrapper > .profile-content > .profile-name {
@@ -430,8 +450,9 @@ div[id] {
   width: 500px;
 }
 
-.content > .main-container > .contact-wrapper > .meeting-content > .meeting-with-email-form input, .content > .main-container > .contact-wrapper > .meeting-content > .meeting-with-email-form textarea {
-  background-color: #2E2E2E;
+.content > .main-container > .contact-wrapper > .meeting-content > .meeting-with-email-form input,
+.content > .main-container > .contact-wrapper > .meeting-content > .meeting-with-email-form textarea {
+  background-color: #2e2e2e;
   padding: 10px;
   font-family: "GilroyLight";
   font-size: 16px;
@@ -476,5 +497,60 @@ div[id] {
 
 .content > .main-container > .contact-wrapper > .meeting-content > .meeting-with-email-form .meeting-submit:hover {
   cursor: pointer;
+}
+
+@media screen and (max-width: 780px) {
+  .content > .nav-bar > .row > .right-items > .navigations {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    background-color: rgba(51, 51, 51, 0.8);
+    top: 70px;
+    right: 0;
+    display: none;
+  }
+  .content > .nav-bar > .row > .right-items > .navigations > li {
+    width: 100%;
+    text-align: right;
+  }
+  .content > .nav-bar > .row > .right-items > .navigations > li:hover {
+    background-color: rgba(26, 26, 26, 0.8);
+  }
+  .content > .nav-bar > .row > .right-items > .navigations > li > a {
+    padding: 20px;
+  }
+  .content > .nav-bar > .row > .right-items > .navigations.open {
+    display: block;
+  }
+  .content > .nav-bar > .row > .right-items > .navigations.close {
+    display: none;
+  }
+  .content > .nav-bar > .row > .right-items > .burger {
+    display: block;
+  }
+  .content > .nav-bar > .row > .right-items > .burger.toggle > .line:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+  }
+  .content > .nav-bar > .row > .right-items > .burger.toggle > .line:nth-child(2) {
+    opacity: 0;
+  }
+  .content > .nav-bar > .row > .right-items > .burger.toggle > .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .content > .nav-bar > .row {
+    height: 50px;
+  }
+  .content > .nav-bar > .row > .left-items > img {
+    height: 50px;
+  }
+  .content > .nav-bar > .row > .left-items > h1 {
+    font-size: 16px;
+  }
+  .content > .nav-bar > .row > .right-items > .navigations {
+    top: 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

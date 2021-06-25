@@ -7,6 +7,14 @@
   font-family: "GilroyBold";
   src: url("fonts/GILROY-EXTRABOLD.OTF");
 }
+
+@keyframes blink {
+    0%  { background-color: #ea4a4c; }
+    49% { background-color: #ea4a4c; }
+    50% { background-color: transparent; }
+    99% { background-color: transparent; }
+    100%  { background-color: #ea4a4c; }
+  }
 * {
   margin: 0px;
   padding: 0px;
@@ -100,8 +108,43 @@ div[id] {
       flex-direction: column;
       justify-content: flex-end;
       padding-bottom: 160px;
+      & > .type-writer-container{
+        font-size: 20px;
+        // font-weight: bold;
+        letter-spacing: 0.1rem;
+        overflow: hidden;
+        padding-bottom: 14px;
+        & > h1 {
+            display: flex;
+            align-items: flex-end;
+            font-family: "GilroyLight";
+            color: white;
+            & > span.typed-text{
+                font-weight: normal;
+                font-family: "GilroyLight";
+                color: #ea4a4c;
+            }
+            & > span.cursor{
+                display: inline-block;
+                background-color: #ea4a4c;
+                margin-bottom: 5px;
+                margin-left: 0.1rem;
+                width: 20px;
+                height: 3px;
+                animation: blink 1s infinite;
+    
+                &.typing{
+                    animation: none;
+                    background-color: #ea4a4c;
+                color: #ea4a4c;
+                }
+            }
+    
+        }
+      }
       & > .intro-content {
         padding-bottom: 24px;
+
         & > h1 {
           width: 550px;
           font-family: "GilroyLight";
@@ -443,6 +486,8 @@ div[id] {
       }
     }
   }
+
+
 }
 
 @media screen and (max-width: 780px) {

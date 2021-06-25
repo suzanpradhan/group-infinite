@@ -11,5 +11,6 @@
   <body>
         @yield('content')
         @stack('scripts')
+        <script src="{{asset('/js/typewriter-anim.js')}}"></script>
   </body>
 </html>

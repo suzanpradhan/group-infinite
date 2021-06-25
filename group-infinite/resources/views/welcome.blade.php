@@ -30,6 +30,9 @@
     </div>
     <div class="main-container">
       <div id="top-intro" class="intro-wrapper">
+        <div class="type-writer-container">
+            <h1>Infinite&nbsp;<span class="typed-text"></span><span class="cursor">&nbsp;</span></h1>
+          </div>
         <div class="intro-content">
           <h1>
             We'll create an award winning websites for you through our
